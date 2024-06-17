@@ -765,11 +765,11 @@
                 {%- when 'products_belong' -%}
                   {% if product.metafields.custom.products_belong_together.value %}
                     <div class="products-belong-wrapper">
-                      <p class="products-belong-title">{{ block.settings.title }}</p>
+                      <p class="products-belong-title">{{ product.metafields.custom.header_samma_series }}</p> 
                       <div class="products-belong-content">
                         {% for item in product.metafields.custom.products_belong_together.value %}
                           <div class="item">
-                            {% if item.featured_image %}
+                            {% if item.featured_image %} 
                               <a
                                 href="{{ item.url }}"
                                 class="item-image"
@@ -1749,12 +1749,6 @@
           "id": "show_products_belong",
           "label": "Show products that belong together",
           "default": true
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Kombinera gärna ihop med dessa radiestenar"
         }
       ]
     },
